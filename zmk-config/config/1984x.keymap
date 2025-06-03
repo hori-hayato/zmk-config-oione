@@ -152,12 +152,12 @@
         layers = <LAYERS>; \
       };
 
-    //  ╭─────────────────────╮          ╭─────────────────────╮
-    //  │   0   1   2   3   4 │          │  5   6   7   8  10  │
-    //  │  11  12  13  14  15 │          │ 15  16  17  18  19  │
-    //  │  20  21  22  23  24 ╰───╮  ╭───╯ 25  26  27  28  29  │
-    //  ╰────────────╮ 30  31  32 │  │ 33  34  35 ╭────────────╯
-    //               ╰────────────╯  ╰────────────╯
+    //  ╭──────────────────────────╮          ╭──────────────────────────╮
+    //  │   0   1   2   3   4   5  │          │  6   7   8   9   10  11  │
+    //  │  12  13  14  15  16  17  │          │     18  19  20   21  22  │
+    //  │  23  24  25  26  27  28  │          │ 29  30  31  32   33  34  │
+    //  │  35  36  37  38  39  40  │          │ 41  42  43  44   45  46  │
+    //  ╰──────────────────────────╯          ╰──────────────────────────╯
 
     // COMBO(caps_word, &caps_word, 30 33, DEFAULT)
   };*/
@@ -167,58 +167,11 @@
 
     default_layer {
       bindings = <
-   &kp Q            &kp W            &kp F            &kp P            &kp B                    &kp J            &kp L            &kp U            &kp Y            &kp SQT
-   &kp A            &kp R            &kp S            &kp T            &kp G                    &kp M            &kp N            &kp E            &kp I            &kp O
-   &hm LCTRL Z      &hm LSFT X       &kp C            &kp D            &kp V                    &kp K            &kp H            &kp COMMA        &hm RGUI DOT     &hmt RCTRL FSLH
-                                     &lalt_gresc      &lhp NUM TAB     &mt LGUI BSPC            &kp SPACE        &nav_caps        &sftent RSFT RET
+   &kp Q            &kp W            &kp F            &kp P            &kp B              &kp J            &kp L            &kp U            &kp Y            &kp E           &kp Y            &kp E
+   &kp A            &kp R            &kp S            &kp T            &kp G              &kp M            &kp N            &kp E            &kp I            &kp O           &kp K            &kp H 
+   &kp S            &kp T            &kp C            &kp D            &kp V              &kp K            &kp H            &kp G            &kp M            &kp N           &kp N            &kp E
+   &kp A            &kp R            &kp F            &kp P            &kp G              &kp M            &kp Q            &kp W            &kp F            &kp P           &kp B            &kp P  
       >;
     };
-
-    num_layer {
-      bindings = <
-   &kp N1           &kp N2           &kp N3           &kp N4           &kp N5                   &kp N6           &kp N7           &kp N8           &kp N9           &kp N0
-   &kp TILDE        &kp AMPS         &kp LPAR         &kp LBRC         &kp LBKT                 &kp PLUS         &kp MINUS        &kp SEMI         &kp STAR         &kp EXCL
-   &hm LCTRL GRAVE  &hm LSFT PIPE    &kp RPAR         &kp RBRC         &kp RBKT                 &kp EQUAL        &kp UNDER        &kp COLON        &hm RGUI DLLR    &hmt RCTRL BSLH
-                                     &mo SYSTEM       &trans           &trans                   &trans           &trans           &trans
-      >;
-    };
-
-    nav_layer {
-      bindings = <
-   &none            &none            &none            &none            &none                    &vol_dn          &vol_up          &kp C_PP         &none            &kp DEL
-   &none            &none            &none            &none            &none                    &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp PG_UP
-   &kp LCTRL        &kp LSFT         &none            &none            &none                    &kp HOME         &kp END          &kp K_APP        &kp INS          &kp PG_DN
-                                     &kp LALT         &trans           &mt LGUI LA(BSPC)        &trans           &trans           &mo SYSTEM
-      >;
-    };
-
-    app_layer {
-      bindings = <
-   &space_num_1     &space_num_2     &space_num_3     &space_num_4     &space_num_5             &space_num_6     &space_num_7     &space_num_8     &space_num_9     &space_num_0
-   &tmux_num_1      &tmux_num_2      &tmux_num_3      &tmux_num_4      &tmux_num_5              &tmux_num_6      &tmux_num_7      &tmux_num_8      &tmux_num_9      &tmux_num_0
-   &none            &none            &none            &none            &none                    &none            &none            &none            &none            &none
- //&kp F1           &kp F2           &kp F3           &kp F4           &kp F5                   &kp F6           &kp F7           &kp F8           &kp F9           &kp F10
-                                     &trans           &none            &none                    &none            &none            &none
-      >;
-    };
-
-    system_layer {
-      bindings = <
-   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4             &none            &none            &none            &none            &ext_power EP_ON
-   &bt BT_DISC 0    &bt BT_DISC 1    &bt BT_DISC 2    &bt BT_DISC 3    &bt BT_DISC 4            &none            &none            &none            &none            &ext_power EP_OFF
-   &none            &none            &none            &none            &bt BT_CLR               &none            &none            &none            &none            &none
-                                     &trans           &none            &none                    &none            &none            &none
-      >;
-    };
-
-    emty_layer {
-      bindings = <
-   &none            &none            &none            &none            &none                    &none            &none            &none            &none            &none
-   &none            &none            &none            &none            &none                    &none            &none            &none            &none            &none
-   &none            &none            &none            &none            &none                    &none            &none            &none            &none            &none
-                                     &none            &none            &none                    &none            &none            &none
-      >;
-    };
-
   };
 };
